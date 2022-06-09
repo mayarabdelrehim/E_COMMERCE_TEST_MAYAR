@@ -1,4 +1,4 @@
-@regression
+
 @smoke
 Feature: user could hover categories and select sub category
   Scenario: user could hover categories

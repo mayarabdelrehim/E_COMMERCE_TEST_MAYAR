@@ -1,4 +1,4 @@
-@regression
+
 @smoke
 Feature: user could open followUs links
 #first scenario:

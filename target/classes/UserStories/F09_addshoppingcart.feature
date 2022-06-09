@@ -1,4 +1,4 @@
-@regression
+
 @smoke
 
 Feature: user could add products to shopping cart

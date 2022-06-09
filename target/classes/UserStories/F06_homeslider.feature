@@ -1,4 +1,4 @@
-@regression
+
 @smoke
 
 Feature: user will be able to open sliders in home page

@@ -1,5 +1,5 @@
-#@regression
-@Smoke
+
+@smoke
 
 Feature: User could search for any product
 
