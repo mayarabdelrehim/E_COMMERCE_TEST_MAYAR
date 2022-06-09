@@ -1,0 +1,3 @@
+file:src/main/resources/UserStories/F06_homeslider.feature:7:12
+file:src/main/resources/UserStories/F02_login.feature:4
+file:src/main/resources/UserStories/F01_register.feature:6
