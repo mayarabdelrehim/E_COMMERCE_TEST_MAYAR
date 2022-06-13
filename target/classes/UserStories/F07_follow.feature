@@ -13,4 +13,8 @@ Feature: user could open followUs links
     When user open twitter page
     Then  twitter is opened
 
+# third scenario:
+  Scenario: user could open site and push follow us RSS
+    When user open RSS page
+    Then  RSS is opened
 

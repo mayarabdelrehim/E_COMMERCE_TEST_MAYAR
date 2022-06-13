@@ -6,7 +6,7 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
 
 public class D04_searchstepdef {
-
+// FIRST SCENARIO:
     @Given("user navigate to home page")
     public void user_navigate_to_home_page() {
         Hooks.driver.navigate().to("https://demo.nopcommerce.com/");
@@ -14,7 +14,8 @@ public class D04_searchstepdef {
 
     @And("Search for {string}")
     public void search_for(String string) {
-        Hooks.driver.findElement(By.id("small-searchterms")).sendKeys("Iphone 7s");
+
+                Hooks.driver.findElement(By.id("small-searchterms")).sendKeys("Iphone 7s");
     }
 
     @Then("Click on SEARCH button")
@@ -22,6 +23,27 @@ public class D04_searchstepdef {
         Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[1]/div[2]/div[2]/form/button")).click();
         Thread.sleep(1500);
     }
+
+
+
+// SECOND SCENARIO:
+
+    @Given("user navigates to home page")
+    public void user_navigates_to_home_page() {
+        Hooks.driver.navigate().to("https://demo.nopcommerce.com/");
+    }
+
+    @And("user Search for {string}")
+    public void user_search_for(String string) {
+        Hooks.driver.findElement(By.id("small-searchterms")).sendKeys("AP_MBP_13");
+    }
+
+    @Then("Click on SEARCH")
+    public void click_on_search() throws InterruptedException {
+        Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[1]/div[2]/div[2]/form/button")).click();
+        Thread.sleep(1500);
+    }
+
 
 
 
