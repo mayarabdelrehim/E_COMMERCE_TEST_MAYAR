@@ -72,6 +72,7 @@ public void face_twitter_new_tab()
 
     }
 
+    // THIRD SCENARIO:
 
     @When("user open RSS page")
     public void user_RSS_hover() throws InterruptedException {
@@ -101,6 +102,39 @@ public void face_twitter_new_tab()
         Hooks.driver.switchTo().window(tabs.get(0));
 
     }
+
+    // FOURTH SCENARIO:
+    @When("user open youtube page")
+    public void user_youtube_hover() throws InterruptedException {
+
+
+        WebElement followUs = Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[4]/div[1]/div[4]/div[1]/div/strong"));
+        Actions actions = new Actions(Hooks.driver);
+        actions.moveToElement(followUs);
+        WebElement youtube = Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[4]/div[1]/div[4]/div[1]/ul/li[4]/a"));
+        actions.moveToElement(youtube);
+        actions.click().build().perform();
+        System.out.println(Hooks.driver.getCurrentUrl());
+        System.out.println(Hooks.driver.getTitle());
+        Thread.sleep(5000);
+    }
+
+
+    @Then("youtube is opened")
+    public void face_youtube_new_tab() {
+        String url = Hooks.driver.getWindowHandle();
+        ArrayList<String> tabs = new ArrayList<>(Hooks.driver.getWindowHandles());
+        Hooks.driver.switchTo().window(tabs.get(1));
+        System.out.println(Hooks.driver.getCurrentUrl());
+        System.out.println(Hooks.driver.getTitle());
+        Assert.assertEquals(Hooks.driver.getCurrentUrl(), "https://www.youtube.com/user/nopCommerce");
+        Hooks.driver.close();
+        Hooks.driver.switchTo().window(tabs.get(0));
+    }
+
+
+
+
 
 
 }

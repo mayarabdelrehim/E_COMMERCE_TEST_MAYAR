@@ -18,3 +18,9 @@ Feature: user could open followUs links
     When user open RSS page
     Then  RSS is opened
 
+
+# fourth scenario:
+  Scenario: user could open site and push follow us youtube
+    When user open youtube page
+    Then  youtube is opened
+

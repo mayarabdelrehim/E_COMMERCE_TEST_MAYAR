@@ -1,7 +1,7 @@
 
 @smoke
 
-Feature: User could search for any product
+Feature: User could search for any product by NAME
 # FIRST Scenario:
   Scenario: user could open site and search
 
@@ -11,7 +11,7 @@ Feature: User could search for any product
 
   # SECOND Scenario:
 
-  Scenario: user could open site and search
+  Scenario: user could open site and search by SKU
 
     Given user navigates to home page
     And user Search for "SKU"
