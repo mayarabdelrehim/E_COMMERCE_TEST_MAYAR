@@ -27,7 +27,7 @@ public class D02_loginstepdef {
     @Then("user click on login button")
     public void login_button() throws InterruptedException {
         Hooks.driver.findElement(login.login_button()).click();
-        Thread.sleep(100);
+        Thread.sleep(1000);
         SoftAssert soft = new SoftAssert();
         soft.assertEquals(Hooks.driver.getCurrentUrl().contains("https://demo.nopcommerce.com/"), "true");
         soft.assertAll();

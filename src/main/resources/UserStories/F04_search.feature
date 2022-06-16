@@ -11,8 +11,8 @@ Feature: User could search for any product by NAME
 
   # SECOND Scenario:
 
-  Scenario: user could open site and search by SKU
 
-    Given user navigates to home page
-    And user Search for "SKU"
-    Then Click on SEARCH
+  Scenario: user can search for product by SKU
+    When user navigates to homepage to search SKU
+    And user clicks on sku search field in homepage
+    Then sku search result appears on screen
